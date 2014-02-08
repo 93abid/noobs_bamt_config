@@ -1,1 +1,2 @@
-must run as root\nplace main.py anywhere on your bamt running machine
+must run as root
+place main.py anywhere on your bamt running machine
