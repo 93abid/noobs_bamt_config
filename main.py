@@ -173,6 +173,7 @@ def create_backup():
 	os.system("cp /etc/bamt/cgminer.conf /etc/bamt/cgminer_backup.conf")
 	os.system("cp /etc/bamt/pools /etc/bamt/pools_backup")
 
+
 with open("/etc/bamt/cgminer.conf") as data_file:
 	decoded=json.load(data_file)
 
@@ -196,9 +197,9 @@ else:
 o.close()
 os.system("rm t")
 while go:
-	#create_backup()
+	
 	os.system("/etc/init.d/mine stop")
-	print "\n\n\tNOOBS BAMT CONFIGURATION\n\n1)View all pools\n2)View cgminer config\n3)EXIT\n\nEnter your choice: "
+	print "\n\n\tNOOBS BAMT CONFIGURATION\n\n1)View all pools\n2)View cgminer config\n3)Create backup of existing configuration\n4)EXIT\n\nEnter your choice: "
 	ch=input()
 	if ch==1:
 		display_pools()
@@ -209,8 +210,10 @@ while go:
 		display_config()
 		edit_config()
 		display_config()
-
 	elif ch==3:
+		create_backup()
+		print "\nBackup created in /etc/bamt"
+	elif ch==4:
 		break
 		os.system("clear")
 		print "Exiting..."
