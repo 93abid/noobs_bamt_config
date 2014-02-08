@@ -226,9 +226,9 @@ while go:
 		print "option coming soon.."
 		continue#TODO check for updates
 	elif ch==6:
-		break
 		os.system("clear")
 		print "Exiting..."
 		os.system("/etc/init.d/mine start")
+		break
 	create_pools()
 
