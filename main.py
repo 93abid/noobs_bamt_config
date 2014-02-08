@@ -196,7 +196,8 @@ else:
 o.close()
 os.system("rm t")
 while go:
-	create_backup()
+	#create_backup()
+	os.system("/etc/init.d/mine stop")
 	print "\n\n\tNOOBS BAMT CONFIGURATION\n\n1)View all pools\n2)View cgminer config\n3)EXIT\n\nEnter your choice: "
 	ch=input()
 	if ch==1:
@@ -213,5 +214,6 @@ while go:
 		break
 		os.system("clear")
 		print "Exiting..."
+		os.system("/etc/init.d/mine start")
 	create_pools()
 
