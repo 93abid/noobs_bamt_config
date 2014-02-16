@@ -24,7 +24,7 @@ def display_pools():#Display all worker information
 		print "User:",decoded[pools][i][user]
 		print "Password:",decoded[pools][i][passw],"\n"
 		i=i+1
-
+#display all config
 def display_config(): 	
 	os.system("clear")
 	print "CG Miner Config\n"
